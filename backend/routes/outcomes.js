@@ -6,6 +6,7 @@ const {fetchOutcomesHandler, fetchOutcomesThroughThemeHandler, fetchOutcomeInter
 const router = express.Router();
 
 router.get('/interface/:organizationUri', fetchOutcomeInterfaceHandler);
+// router.get('/interface/theme/:themeUri', fetchOutcomeInterfaceHandler);
 router.get('/interface', fetchOutcomeInterfaceHandler);
 router.get('/', fetchOutcomesHandler);
 router.get('/:organizationUri', fetchOutcomesHandler);

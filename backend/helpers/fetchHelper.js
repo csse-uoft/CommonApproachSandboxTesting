@@ -1,5 +1,4 @@
 const {name2Model} = require("./name2Model");
-const {GDBImpactModelModel} = require("../models/impactStuffs");
 
 
 
@@ -9,13 +8,12 @@ async function fetchDataTypeInterfaces(name, req, res) {
   let objects
   if (organizationUri === 'undefined' || !organizationUri) {
     objects = await name2Model[name].find({});
-  } else {
+  } else if (organizationUri) {
     if (name === 'IndicatorReport' || name === 'Indicator') {
       objects = await name2Model[name].find({forOrganization: organizationUri})
     } else {
       objects = await name2Model[name].find({organization: organizationUri})
     }
-
   }
 
   const interfaces = {}
