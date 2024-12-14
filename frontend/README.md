@@ -159,6 +159,7 @@ The code building pages and components needed to build pages are in folder src/c
         - `EnhancedTableHead.js`: A component for rendering a customizable table header, with sorting functionality.
         - `EnhancedTableToolbar.js`: A component providing toolbar actions for the table (e.g., filters).
         - `index.js`: Main export file that aggregates and re-exports table components.
+        - `TR.js`: a Wrapper component for rendering table rows.
       
       - `dialogs/`: Common dialog components shared across the application.
         - `DeleteDialog.js`: A reusable confirmation dialog for deletion operations.
@@ -167,19 +168,26 @@ The code building pages and components needed to build pages are in folder src/c
       - `fields/`: A collection of field components that serve as building blocks for forms and data entry.
         - `AddressFieldField.js`: A component for handling address input fields.
         - `CSVUploadModal.js`: A component providing a modal interface for uploading CSV files.
-        - `CounterFactualField.js`: A field component for managing counterfactual scenario inputs.
+        - `CounterFactualField.js`: A field component for managing counterfactual inputs.
         - `FileUploader.js`: A reusable component for uploading files.
         - `GeneralField.js`: A generic input field component that can be adapted for various inputs.
         - `ImpactReportField.js`: A specialized field component for impact reports.
-        - `IndicatorReportField.js`: A field component dealing with indicator report inputs.
+        - `IndicatorReportField.js`: A field component dealing with indicator reports.
         - `MultiSelectField.js`: A component for selecting multiple options from a list.
         - `OutcomeField.js`: A component designed for inputting outcome-related data.
         - `RadioField.js`: A radio button field component for selecting a single option.
-        - `SelectField.js`: A dropdown select field for choosing one option from many.
-        - `StakeholderOutcomeField.js`: A field component for stakeholder-outcome related inputs.
-        - `URIFields.js`: A component for handling URI (or URL) inputs.
-        - `dataTypeGraph.js`: A field or visualization component related to data type graphs.
-        - `indicatorField.js`: A component specialized for indicator inputs.
+        - `SelectField.js`: A dropdown single select field for choosing one option from many.
+        - `StakeholderOutcomeField.js`: A field component for managing stakeholder outcome inputs.
+        - `URIFields.js`: A URI (or URL) input component.
+        - `dataTypeGraph.js`: A visualization component showing data type relationship graphs.
+        - `IndicatorField.js`: A component specialized for indicator inputs.
+       
+      - `DeleteModal.js`: A reusable modal component for confirming deletion actions.
+      - `DropdownFilter.js`: A component for rendering a dropdown filter interface, enabling quick filtering of data.
+      - `DropdownMenu.js`: A component that provides a dropdown menu for selecting actions and navigation.
+      - `LoadingButton.js`: A button component that shows a loading spinner when an action is in progress.
+      - `PasswordHint.js`: A component that displays password requirements or hints.
+      - `index.js`: An index file that may re-export components from the `shared` directory for easier imports.
 
 
 
