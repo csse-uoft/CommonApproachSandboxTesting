@@ -131,11 +131,87 @@ The code building pages and components needed to build pages are in folder src/c
     - `nodeGraph/`: Components related to displaying data in a node graph.
       - `nodeGraph.js`: Component that handles node graph visualization and interactions.
     
-    - `organizations/`: Components related to managing organizations.
+    - `organizations/`: Components for managing and displaying organizations.
       - `AddEditOrganization.js`: Component for adding or editing one organization.
       - `Organization.js`: Component representing a single organization’s data.
       - `OrganizationView.js`: Component providing a detailed view of an organization.
       - `Organizations.js`: Component listing and managing organizations.
+
+    - `outcomes/`: Components for managing and displaying outcomes.
+      - `AddEditOutcome.js`: Component for creating or updating an outcome.
+      - `Outcome.js`: Component representing a single outcome.
+      - `OutcomeView.js`: Component providing a detailed view of an outcome.
+      - `Outcomes.js`: Component listing and managing outcomes.
+    
+    - `registration/`: Components related to user registration and onboarding.
+      - `UserFirstEntry.js`: Component handling the first-time entry flow for new users.
+      - `UserInvite.js`: Component to handle user invitations.
+    
+    - `routes/`: Utilities related to routing.
+      - `PrivateRoute.js`: Utility that restricts routes to authenticated users only.
+      - `RoutesForUserTypes.js`: Utility that defines different route configurations based on user roles or types.
+    
+    - `sankeyDiagram/`: Components for rendering Sankey diagrams.
+      - `SankeyDiagram.js`: A component that gathers user requirements for a Sankey diagram and renders it accordingly.
+     
+    - `shared/`: Contains reusable components that can be utilized across various parts of the application.
+      - `Table/`: Components for building tables.
+        - `EnhancedTableHead.js`: A component for rendering a customizable table header, with sorting functionality.
+        - `EnhancedTableToolbar.js`: A component providing toolbar actions for the table (e.g., filters).
+        - `index.js`: Main export file that aggregates and re-exports table components.
+        - `TR.js`: a Wrapper component for rendering table rows.
+      
+      - `dialogs/`: Common dialog components shared across the application.
+        - `DeleteDialog.js`: A reusable confirmation dialog for deletion operations.
+        - `Dialogs.js`: A main or higher-level component that manages and renders various dialogs.
+      
+      - `fields/`: A collection of field components that serve as building blocks for forms and data entry.
+        - `AddressFieldField.js`: A component for handling address input fields.
+        - `CSVUploadModal.js`: A component providing a modal interface for uploading CSV files.
+        - `CounterFactualField.js`: A field component for managing counterfactual inputs.
+        - `FileUploader.js`: A reusable component for uploading files.
+        - `GeneralField.js`: A generic input field component that can be adapted for various inputs.
+        - `ImpactReportField.js`: A specialized field component for impact reports.
+        - `IndicatorReportField.js`: A field component dealing with indicator reports.
+        - `MultiSelectField.js`: A component for selecting multiple options from a list.
+        - `OutcomeField.js`: A component designed for inputting outcome-related data.
+        - `RadioField.js`: A radio button field component for selecting a single option.
+        - `SelectField.js`: A dropdown single select field for choosing one option from many.
+        - `StakeholderOutcomeField.js`: A field component for managing stakeholder outcome inputs.
+        - `URIFields.js`: A URI (or URL) input component.
+        - `dataTypeGraph.js`: A visualization component showing data type relationship graphs.
+        - `IndicatorField.js`: A component specialized for indicator inputs.
+       
+      - `DeleteModal.js`: A reusable modal component for confirming deletion actions.
+      - `DropdownFilter.js`: A component for rendering a dropdown filter interface, enabling quick filtering of data.
+      - `DropdownMenu.js`: A component that provides a dropdown menu for selecting actions and navigation.
+      - `LoadingButton.js`: A button component that shows a loading spinner when an action is in progress.
+      - `PasswordHint.js`: A component that displays password requirements or hints.
+      - `index.js`: An index file that may re-export components from the `shared` directory for easier imports.
+
+    - `stakeholderOutcome/`: Components for handling stakeholder outcomes.
+      - `AddEditStakeholderOutcome.js`: Component for creating or editing stakeholder outcomes.
+      - `StakeholderOutcomeView.js`: Component to display a detailed view of a single stakeholder outcome.
+      - `StakeholderOutcomes.js`: Component listing and managing stakeholder outcomes associated with a specific organization.
+      - `organization-stakeholderOutcome.js`: This component allows users to view and select from a list of organizations. Upon choosing an organization, users can seamlessly navigate to StakeholderOutcomes.js to explore further details.
+      - `stakeholderOutcome.js`: A component representing a single stakeholder outcome.
+    
+    - `stakeholders/`: Components for managing and displaying stakeholders.
+      - `AddEditStakeholder.js`: Component for adding or editing stakeholders.
+      - `Stakeholder.js`: Component representing a single stakeholder.
+      - `StakeholderView.js`: Component providing a detailed view of a stakeholder.
+      - `Stakeholders.js`: Component listing and managing stakeholders.
+    
+    - `theme/`: Components related to theme management and presentation.
+      - `AddEditTheme.js`: Component for adding or editing theme data.
+      - `Theme.js`: Component representing a single theme.
+      - `ThemeView.js`: Component providing a detailed view of a theme.
+      - `Themes.js`: Component listing and managing themes.
+    
+    - `themeNetwork/`: Components related to theme networks(theme and subTheme Relationships).
+      - `AddEditThemeNetwork.js`: Component for adding or editing a theme network.
+      - `ThemeNetworkView.js`: Component providing a detailed view of a theme network.
+      - `ThemeNetworks.js`: Component listing and managing theme networks.
 
 
 
