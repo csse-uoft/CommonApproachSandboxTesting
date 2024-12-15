@@ -188,30 +188,30 @@ The code building pages and components needed to build pages are in folder src/c
       - `LoadingButton.js`: A button component that shows a loading spinner when an action is in progress.
       - `PasswordHint.js`: A component that displays password requirements or hints.
       - `index.js`: An index file that may re-export components from the `shared` directory for easier imports.
-     
-  - `stakeholderOutcome/`: Components for handling stakeholder outcome data and views.
+
+    - `stakeholderOutcome/`: Components for handling stakeholder outcomes.
       - `AddEditStakeholderOutcome.js`: Component for creating or editing stakeholder outcomes.
       - `StakeholderOutcomeView.js`: Component to display a detailed view of a single stakeholder outcome.
-      - `StakeholderOutcomes.js`: Component listing and managing multiple stakeholder outcomes.
-      - `organization-stakeholderOutcome.js`: Component focusing on organization-specific stakeholder outcome data.
-      - `stakeholderOutcome.js`: A component representing a single stakeholder outcome or related utility component.
+      - `StakeholderOutcomes.js`: Component listing and managing stakeholder outcomes associated with a specific organization.
+      - `organization-stakeholderOutcome.js`: This component allows users to view and select from a list of organizations. Upon choosing an organization, users can seamlessly navigate to StakeholderOutcomes.js to explore further details.
+      - `stakeholderOutcome.js`: A component representing a single stakeholder outcome.
     
     - `stakeholders/`: Components for managing and displaying stakeholders.
-      - `AddEditStakeholder.js`: Component for adding or editing stakeholder information.
+      - `AddEditStakeholder.js`: Component for adding or editing stakeholders.
       - `Stakeholder.js`: Component representing a single stakeholder.
       - `StakeholderView.js`: Component providing a detailed view of a stakeholder.
-      - `Stakeholders.js`: Component listing and managing multiple stakeholders.
+      - `Stakeholders.js`: Component listing and managing stakeholders.
     
     - `theme/`: Components related to theme management and presentation.
       - `AddEditTheme.js`: Component for adding or editing theme data.
       - `Theme.js`: Component representing a single theme.
       - `ThemeView.js`: Component providing a detailed view of a theme.
-      - `Themes.js`: Component listing and managing multiple themes.
+      - `Themes.js`: Component listing and managing themes.
     
-    - `themeNetwork/`: Components related to theme networks.
+    - `themeNetwork/`: Components related to theme networks(theme and subTheme Relationships).
       - `AddEditThemeNetwork.js`: Component for adding or editing a theme network.
       - `ThemeNetworkView.js`: Component providing a detailed view of a theme network.
-      - `ThemeNetworks.js`: Component listing and managing multiple theme networks.
+      - `ThemeNetworks.js`: Component listing and managing theme networks.
 
 
 
