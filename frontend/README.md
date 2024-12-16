@@ -213,6 +213,61 @@ The code building pages and components needed to build pages are in folder src/c
       - `ThemeNetworkView.js`: Component providing a detailed view of a theme network.
       - `ThemeNetworks.js`: Component listing and managing theme networks.
 
+    - `totalReviewPage/`: Components related to content in a summarized form.
+      - `TotalReviewPage.js`: The main component for displaying all data grouped by organizations.
+      - `TotalReviewPageView.js`: A detailed view component for the total review page.
+      - `TotalReviewPages.js`: A component to list or manage multiple total review pages.
+    
+    - `uploadingPages/`: Components for handling pages or interfaces dedicated to uploading files or data.
+      - `uploadingPage.js`: The main component for the uploading page.
+    
+    - `userProfile/`: Components related to managing and displaying user profile information.
+      - `EditProfile.js`: Component for editing user profile details.
+      - `Profile.js`: Component displaying a user's profile information.
+      - `UserResetPassword.js`: Component for handling user password reset functionality.
+      - `UserResetSecurityQuestion.js`: Component for resetting a user’s security question.
+      - `changePrimaryEmail.js`: Component to allow users to change their primary email address.
+    
+    - `users/`: Components for managing user accounts, including listing users, editing user details, and related forms.
+      - `EditUserForm.js`: A form component to edit an existing user's details.
+      - `User.js`: Component representing a single user’s data.
+      - `Users.js`: Component listing and managing multiple users.
+      - `organizationUsers.js`: Component focusing on the management of users within a specific organization.
+    
+    - `Landing.js`: The main landing page component, the homepage after login.
+    - `emailConfirm.js`: Component verifying new email addresses or signups.
+
+  - `constants/`: A directory holding various configuration files and constants used throughout the application.
+    - `default_fields.js`: Contains default field definitions and configurations used in forms or other components.
+    - `forgot_password_fields.js`: Defines fields and settings for "forgot password" functionalities.
+    - `index.js`: An index file that may aggregate and re-export constants from this folder for easier imports.
+    - `login_double_auth_fields.js`: Fields and configurations related to login with double (two-factor) authentication.
+    - `updatePasswordFields.js`: Fields and settings for updating a user's password.
+    - `userFirstEntryFields.js`: Configurations for the fields presented to users on their first entry or onboarding.
+    - `userProfileFields.js`: Field definitions for user profile data.
+
+  - `context/`: A folder for React context providers or related logic that manages global state.
+    - `index.js`: The main file that sets up and exports the application’s context.
+  
+  - `helpers/`: A collection of utility functions, configuration files, and helper modules that assist various parts of the application.
+    - `schemas/`: Contains JSON schema files that define the structure and validation rules for specific data types.
+      - `indicator.json`: Schema defining the structure and validation rules for indicators.
+      - `outcome.json`: Schema for outlining the structure and validation requirements of outcomes.
+      - `theme.json`: Schema describing the structure and rules for themes.
+
+    - `attributeConfig.js`: A configuration file for handling attributes for different datatypes.
+    - `deletingObjectHelper.js`: Utility functions to assist with deleting objects.
+    - `formulaHelpers.js`: Utility functions that handle string format.
+    - `helpersForDropdownFilter.js`: Specific helpers for managing dropdown filter functionality.
+    - `index.js`: An index file that aggregates and re-export helpers for easier imports.
+    - `location_helpers.js`: Functions for formatting the locations to string.
+    - `navigatorHelper.js`: Helpers for page navigation.
+    - `operation_hour_helpers.js`: Utilities for handling time-based logic.
+    - `phone_number_helpers.js`: Functions related to phone number formatting, validation, and parsing.
+    - `validation_helpers.js`: Helper functions related to data validation.
+    
+
+
 
 
 
