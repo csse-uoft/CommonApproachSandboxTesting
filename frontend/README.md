@@ -213,6 +213,33 @@ The code building pages and components needed to build pages are in folder src/c
       - `ThemeNetworkView.js`: Component providing a detailed view of a theme network.
       - `ThemeNetworks.js`: Component listing and managing theme networks.
 
+    - `totalReviewPage/`: Components related to content in a summarized form.
+      - `TotalReviewPage.js`: The main component for displaying all data grouped by organizations.
+      - `TotalReviewPageView.js`: A detailed view component for the total review page.
+      - `TotalReviewPages.js`: A component to list or manage multiple total review pages.
+    
+    - `uploadingPages/`: Components for handling pages or interfaces dedicated to uploading files or data.
+      - `uploadingPage.js`: The main component for the uploading page.
+    
+    - `userProfile/`: Components related to managing and displaying user profile information.
+      - `EditProfile.js`: Component for editing user profile details.
+      - `Profile.js`: Component displaying a user's profile information.
+      - `UserResetPassword.js`: Component for handling user password reset functionality.
+      - `UserResetSecurityQuestion.js`: Component for resetting a user’s security question.
+      - `changePrimaryEmail.js`: Component to allow users to change their primary email address.
+    
+    - `users/`: Components for managing user accounts, including listing users, editing user details, and related forms.
+      - `EditUserForm.js`: A form component to edit an existing user's details.
+      - `User.js`: Component representing a single user’s data.
+      - `Users.js`: Component listing and managing multiple users.
+      - `organizationUsers.js`: Component focusing on the management of users within a specific organization.
+    
+    - `Landing.js`: The main landing page component, the homepage after login.
+    - `emailConfirm.js`: Component verifying new email addresses or signups.
+   
+    
+
+
 
 
 
