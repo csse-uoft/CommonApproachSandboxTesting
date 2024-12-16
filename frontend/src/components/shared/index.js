@@ -8,7 +8,6 @@ import DeleteModal from './DeleteModal';
 import DropdownMenu from './DropdownMenu';
 import SearchIcon from '@mui/icons-material/Search';
 
-import { providerFormTypes } from '../../constants/provider_fields.js'
 
 const useStyles = makeStyles((theme) => ({
   link: {
@@ -44,69 +43,6 @@ export function Link({className = '', colorWithHover, color,to, ...props}) {
  * @returns {*}
  * @constructor
  */
-export function CustomToolbar({handleAdd, handleUpload, handleSearch, type}) {
-  const navigate = useNavigate();
-  const classes = useStyles();
-
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = event => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleLink = link => () => {
-    navigate(link);
-  };
-
-  return (
-    <>
-      {handleUpload && <Chip onClick={handleUpload}
-            color="default"
-            icon={<UploadIcon/>}
-            label="Upload"
-            variant="outlined"
-            className={classes.chipButton}
-      />}
-
-      <Chip onClick={type === 'providers' ? handleClick : handleSearch}
-            color="primary"
-            icon={<SearchIcon/>}
-            label="Advance Search"
-            variant="outlined"
-            className={classes.chipButton}
-      />
-      <Chip onClick={type === 'providers' ? handleClick : handleAdd}
-            color="primary"
-            icon={<AddIcon/>}
-            label="Add"
-            variant="outlined"
-            className={classes.chipButton}
-      />
-
-      {/*For Providers */}
-      {type === 'providers' &&
-      <Menu
-        id="long-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={open}
-        onClose={handleClose}
-      >
-        {Object.entries(providerFormTypes).map(([value, formType]) =>
-          <MenuItem disabled={formType !== 'Organization' && formType !== 'Volunteer'} key={formType} onClick={handleLink(`/providers/${value}/new`)}>
-            {formType}
-          </MenuItem>)
-        }
-      </Menu>
-      }
-    </>
-  );
-}
 
 export function Loading({message = 'Loading Components...'}) {
   const classes = useStyles();

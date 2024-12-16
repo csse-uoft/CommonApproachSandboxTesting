@@ -1,7 +1,5 @@
 import {Validator} from "../helpers";
 import {defaultField} from "./index";
-import {defaultUserFields} from "./default_fields";
-
 export const userProfileFields = {
   givenName: {
     ...defaultField,

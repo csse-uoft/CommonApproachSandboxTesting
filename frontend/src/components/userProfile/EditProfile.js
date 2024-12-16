@@ -36,6 +36,7 @@ const useStyles = makeStyles(() => ({
  * @constructor
  */
 export default function EditProfile() {
+  const classes = useStyles();
   const uri = encodeURIComponent(useParams().uri);
   const navigator = useNavigate();
   const navigate = navigateHelper(navigator)
