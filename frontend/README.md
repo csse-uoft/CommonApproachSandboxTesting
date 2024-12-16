@@ -248,6 +248,23 @@ The code building pages and components needed to build pages are in folder src/c
 
   - `context/`: A folder for React context providers or related logic that manages global state.
     - `index.js`: The main file that sets up and exports the application’s context.
+  
+  - `helpers/`: A collection of utility functions, configuration files, and helper modules that assist various parts of the application.
+    - `schemas/`: Contains JSON schema files that define the structure and validation rules for specific data types.
+      - `indicator.json`: Schema defining the structure and validation rules for indicators.
+      - `outcome.json`: Schema for outlining the structure and validation requirements of outcomes.
+      - `theme.json`: Schema describing the structure and rules for themes.
+
+    - `attributeConfig.js`: A configuration file for handling attributes for different datatypes.
+    - `deletingObjectHelper.js`: Utility functions to assist with deleting objects.
+    - `formulaHelpers.js`: Utility functions that handle string format.
+    - `helpersForDropdownFilter.js`: Specific helpers for managing dropdown filter functionality.
+    - `index.js`: An index file that aggregates and re-export helpers for easier imports.
+    - `location_helpers.js`: Functions for formatting the locations to string.
+    - `navigatorHelper.js`: Helpers for page navigation.
+    - `operation_hour_helpers.js`: Utilities for handling time-based logic.
+    - `phone_number_helpers.js`: Functions related to phone number formatting, validation, and parsing.
+    - `validation_helpers.js`: Helper functions related to data validation.
     
 
 
