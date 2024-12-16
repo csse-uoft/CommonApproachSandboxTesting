@@ -236,7 +236,18 @@ The code building pages and components needed to build pages are in folder src/c
     
     - `Landing.js`: The main landing page component, the homepage after login.
     - `emailConfirm.js`: Component verifying new email addresses or signups.
-   
+
+  - `constants/`: A directory holding various configuration files and constants used throughout the application.
+    - `default_fields.js`: Contains default field definitions and configurations used in forms or other components.
+    - `forgot_password_fields.js`: Defines fields and settings for "forgot password" functionalities.
+    - `index.js`: An index file that may aggregate and re-export constants from this folder for easier imports.
+    - `login_double_auth_fields.js`: Fields and configurations related to login with double (two-factor) authentication.
+    - `updatePasswordFields.js`: Fields and settings for updating a user's password.
+    - `userFirstEntryFields.js`: Configurations for the fields presented to users on their first entry or onboarding.
+    - `userProfileFields.js`: Field definitions for user profile data.
+
+  - `context/`: A folder for React context providers or related logic that manages global state.
+    - `index.js`: The main file that sets up and exports the application’s context.
     
 
 
