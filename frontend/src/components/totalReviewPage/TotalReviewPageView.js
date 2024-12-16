@@ -439,7 +439,8 @@ export default function totalReviewPageView({multi, single, organizationUser, gr
                             customToolbar={
                               <DropdownFilter selectedOrganizations={selectedOrganizations}
                                               areAllGroupOrgsSelected={areAllGroupOrgsSelected(selectedOrganizations)}
-                                              organizationInterfaces
+                                              organizationInterfaces={organizationInterfaces}
+                                              setSelectedOrganizations={setSelectedOrganizations}
                                               handleSelectAllClick={handleSelectAllClick(organizationsWithGroups, setSelectedOrganizations, selectedOrganizations)}
                                               handleChange={handleChange(minSelectedLength, setSelectedOrganizations)}
                                               handleGroupClick={handleGroupClick(areAllGroupOrgsSelected(selectedOrganizations), selectedOrganizations, setSelectedOrganizations)}

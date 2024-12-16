@@ -92,7 +92,7 @@ export default function DropdownFilter({areAllGroupOrgsSelected, selectedOrganiz
               {group.organizations.map((organization) => (
                 <MenuItem key={organization._uri} onClick={() => handleOrgClick(organization)}>
                   <Checkbox checked={selectedOrganizations.includes(organization._uri)}/>
-                  {organization.legalName}
+                  {organization.legalName || organization._uri}
                 </MenuItem>
               ))}
             </MenuList>
