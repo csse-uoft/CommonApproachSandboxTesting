@@ -265,6 +265,13 @@ The code building pages and components needed to build pages are in folder src/c
     - `operation_hour_helpers.js`: Utilities for handling time-based logic.
     - `phone_number_helpers.js`: Functions related to phone number formatting, validation, and parsing.
     - `validation_helpers.js`: Helper functions related to data validation.
+
+  - `defaults.js`: A file for storing constant strings and configuration values that can be referenced across the application.
+
+  - `App.js`: The main application component, serving as the root of the React component tree.
+  - `ErrorBoundary.js`: A component designed to catch and display errors that occur in the component tree below it, preventing the entire app from crashing.
+  - `index.js`: The entry point of the application, typically responsible for rendering the root `App` component into the DOM.
+  - `routes.js`: A file containing route definitions for the application, mapping URLs to components.
     
 
 
