@@ -10,7 +10,7 @@ The frontend uses React.js as the framework and primarily leverages MaterialUI f
 
 ---
 ## Installation
-### Install dependencies
+#### Install dependencies
 ```shell
 npm install -g yarn
 yarn install
@@ -32,7 +32,6 @@ npx serve -s ./build
 ```
 ---
 ## Structure
-All files and folders use PascalCase for naming.
 The code building pages and components needed to build pages are in folder src/components. Most of pages are folded by their catogaries. For example, Dashboards.js and the buttons on the dashboard NavButton.js are in the src/component/dashboard. Moreover, AddEditImpactRisk.js(addEditImpactRisk page) and ImpactRisks(List of Impact Risks page) are in src/components/impactRisk
 
 - `src/`
