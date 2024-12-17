@@ -61,3 +61,11 @@ yarn start
   - `mongoDB.js`: Logic to establish and manage the connection to a MongoDB database.
   - `namespaces.js`: Configuration for managing namespaces, utilized with GraphDB for RDF data.
 
+- `models/`
+  - `logging/`: A dedicated subdirectory for storing data models used to log information into MongoDB.
+    - `api.js`: A Mongoose model for storing API-related information in a MongoDB database.
+    - `errorLogging.js`: A Mongoose model for logging errors, designed to persist error details in MongoDB.
+
+  *(All other files in the models/ directory contain GraphDB utility models. Each file is named according to its primary model and contains that model as well as any closely related, less frequently used models.)*
+
+
