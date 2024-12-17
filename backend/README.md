@@ -68,4 +68,21 @@ yarn start
 
   *(All other files in the models/ directory contain GraphDB utility models. Each file is named according to its primary model and contains that model as well as any closely related, less frequently used models.)*
 
+- `routes/`: Houses server-side route definitions, organizing endpoints that the application exposes.
+  - `baseRoute/`
+    - `base.js`: Defines fundamental routes that do not require authorization for user access.
+
+  - `general/`: Contains general-purpose route files that may not fit into more specific categories.
+    - `dynamicClassInstances.js`: Routes handling dynamic class instance operations.
+    - `generalUserRoute.js`: Routes related to general user operations, including generic user management and data retrieval.
+    - `index.js`: An index file to import and re-export the routes defined in this folder.
+    - `profiles.js`: Routes for managing user profiles including resetting passwords and security questions.
+    - `userTypes.js`: Routes for retrieving different user types.
+ *(All other files at this level define routes for specific data types and functionalities indicated by their filenames. For example:)*
+  - `characteristic.js` / `characteristics.js`: Routes related to characteristics.
+  - `code.js` / `codes.js`: Routes related to codes.
+  - `dataDashboard.js`: Routes for data dashboards (aggregated data views).
+  - `dataExport.js`: Routes that handle exporting data from the system.
+  - `errorReport.js`: Routes for logging issues.
+  - `fileUploading.js`: Routes for handling file uploads and related operations.
 
