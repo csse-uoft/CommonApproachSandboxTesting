@@ -11,7 +11,7 @@ import {UserContext} from "../../context";
 import GeneralField from "../shared/fields/GeneralField";
 import {useSnackbar} from "notistack";
 import SelectField from "../shared/fields/SelectField";
-import {genderOptions} from "../../store/defaults";
+import {genderOptions} from "../../defaults";
 import AddressField from "../shared/fields/AddressFieldField";
 import Dropdown from "../shared/fields/MultiSelectField";
 import {fetchOrganizations} from "../../api/organizationApi";

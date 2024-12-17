@@ -1,4 +1,4 @@
-import {serverHost} from '../store/defaults.js';
+import {serverHost} from '../defaults.js';
 
 export const ACTION_SUCCESS = 'ACTION_SUCCESS';
 export const ACTION_ERROR = 'ACTION_ERROR';
