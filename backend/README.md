@@ -1,5 +1,17 @@
-### Pathfinder Backend
 
+# Common Approach Sandbox Backend
+---
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Structure](#structure)
+---
+## Introduction
+The backend is built using a robust combination of JavaScript, Express.js, and Node.js
+
+---
+
+## Installation
 #### Install dependencies
 ```shell
 npm install -g yarn
@@ -23,9 +35,9 @@ docker run --name mongo -p 27017:27017 --restart unless-stopped -d mongo:latest
 ```shell
 yarn start
 ```
+---
 
-#### Allow Self-Signed Localhost certificate
-Enable
-[chrome://flags/#allow-insecure-localhost](chrome://flags/#allow-insecure-localhost)
+## Structure
 
-Then reboot chrome.
+- `bin/`
+  - `www/`: 
