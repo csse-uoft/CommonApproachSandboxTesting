@@ -78,7 +78,9 @@ yarn start
     - `index.js`: An index file to import and re-export the routes defined in this folder.
     - `profiles.js`: Routes for managing user profiles including resetting passwords and security questions.
     - `userTypes.js`: Routes for retrieving different user types.
- *(All other files at this level define routes for specific data types and functionalities indicated by their filenames. For example:)*
+      
+  *(All other files at this level define routes for specific data types and functionalities indicated by their filenames. For example:)*
+ 
   - `characteristic.js` / `characteristics.js`: Routes related to characteristics.
   - `code.js` / `codes.js`: Routes related to codes.
   - `dataDashboard.js`: Routes for data dashboards (aggregated data views).
