@@ -156,4 +156,20 @@ yarn start
   
   - `userTypes.js`: Logic related to different user roles.
 
+- `utils/`: A collection of utility functions that provide general-purpose support across the application.
+
+  - `constants/`: Holds constant values, configuration data, or reference tables used throughout the application.
+    - `province.js`: Defines province-level constants, including province names, codes, and types.
+
+  - `error/`: Contains utilities dedicated to error handling.
+    - `index.js`: Extending Error for managing and formatting different types of errors.
+
+  - `hashing/`: Provides hashing-related functions and logic.
+    - `index.js`: Implementing hashing algorithms for passwords.
+
+  - `mailer/`: Services and utilities related to sending emails.
+    - `index.js`: Main logic for sending different emails.
+    - `template.js`: Defines email templates.
+
+
 
