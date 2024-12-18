@@ -6,7 +6,6 @@
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
 - [Features](#features)
-- [System Requirements](#system-requirements)
 - [Installation](#installation)
 
 ---
