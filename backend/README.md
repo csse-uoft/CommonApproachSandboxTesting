@@ -144,5 +144,16 @@ yarn start
     - `users.js`: Core logic for managing multiple user accounts.
     - `verifyUser`: Logic responsible for verifying a user’s authorization to modify their account.
 
+  - `users/`: Contains logic and utilities related to user management and operations.
+    - `invite.js`: Handles logic for inviting users, generating invitation links, tokens, and notifications.
+    - `users.js`: Functions and operations dealing with multiple user entities, including retrieval and deleting.
+
+  - `deleteOrganizationWithAllData.js`: A utility for deleting an organization along with all associated records.
+
+  - `dynamicClassInstances.js`: Handles retrieval of dynamic class instances within the application.
+  
+  - `helpers.js`: A collection of general helper functions used by various modules throughout the backend.
+  
+  - `userTypes.js`: Logic related to different user roles.
 
 
