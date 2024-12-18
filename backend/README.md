@@ -39,137 +39,136 @@ yarn start
 
 ## Structure
 
-- `bin/`: Contains startup scripts that help initialize and run the application.
-  - `www`: Typically the main entry point for running the server. This script sets up the server environment and starts the application listening on a specified port.
+- `bin/`: Contains startup scripts that initialize and run the application.
+  - `www`: Serves as the primary entry point for running the server. This script prepares the server environment and starts the application, listening on a specified port.
 
-- `config/`: Houses configuration files and settings.
-  - `index.js`: Main configuration file that loads various application settings, database information and external configurations.
+- `config/`: Stores configuration files and general application settings.
+  - `index.js`: The main configuration file, responsible for loading application settings, database connection details, and external configuration parameters.
 
-- `helpers/`: A collection of utility functions and helper modules used throughout the backend.
-  - `dicts.js`: A file that contains dictionaries and mappings used for various lookup operations.
-  - `fetchHelper.js`: Functions facilitating data fetching from external APIs or services.
-  - `hasAccess.js`: A helper that determines user permissions based on their roles.
-  - `index.js`: An index file that may re-export helper functions for simpler imports.
-  - `name2Model.js`: A utility to map dataType names to specific GraphDB Utils models, for dynamic model lookup.
-  - `phoneNumber.js`: Functions for formatting and parsing phone numbers.
-  - `validator.js`: General validation utilities for ensuring data integrity and correctness.
+- `helpers/`: Provides a collection of utility functions and helper modules used throughout the backend.
+  - `dicts.js`: Defines dictionaries and mappings for various lookup operations.
+  - `fetchHelper.js`: Offers functions to facilitate data fetching from external APIs or services.
+  - `hasAccess.js`: Determines user permissions based on their assigned roles.
+  - `index.js`: An index file that re-exports helper functions for simpler imports.
+  - `name2Model.js`: Maps data type names to GraphDB utility models, enabling dynamic model lookups.
+  - `phoneNumber.js`: Formats and parses phone numbers.
+  - `validator.js`: Implements general validation utilities to ensure data integrity and correctness.
 
-- `loaders/`: Responsible for initializing and configuring various parts of the application.
-  - `express.js`: Loader for setting up Express.js, including middleware, routes, and other Express-related configurations.
-  - `graphDB.js`: Functions to load and connect to a GraphDB database.
-  - `graphdbParameter.js`: A configuration for parameterizing GraphDB queries and connections.
-  - `mongoDB.js`: Logic to establish and manage the connection to a MongoDB database.
-  - `namespaces.js`: Configuration for managing namespaces, utilized with GraphDB for RDF data.
+- `loaders/`: Handles initialization and configuration of different parts of the application.
+  - `express.js`: Sets up Express.js, including middleware, routes, and other related configurations.
+  - `graphDB.js`: Manages loading and connecting to a GraphDB database.
+  - `graphdbParameter.js`: Configures parameters for GraphDB queries and connections.
+  - `mongoDB.js`: Establishes and maintains the connection to a MongoDB database.
+  - `namespaces.js`: Manages namespaces used with GraphDB for handling RDF data.
 
-- `models/`
-  - `logging/`: A dedicated subdirectory for storing data models used to log information into MongoDB.
-    - `api.js`: A Mongoose model for storing API-related information in a MongoDB database.
-    - `errorLogging.js`: A Mongoose model for logging errors, designed to persist error details in MongoDB.
+- `models/`:
+  - `logging/`: Contains data models dedicated to logging information into MongoDB.
+    - `api.js`: A Mongoose model for storing API-related information.
+    - `errorLogging.js`: A Mongoose model for persisting error details in MongoDB.
+  
+  *(All other files in `models/` define GraphDB utility models. Each file is named after its primary model and may include additional, less frequently used models.)*
 
-  *(All other files in the models/ directory contain GraphDB utility models. Each file is named according to its primary model and contains that model as well as any closely related, less frequently used models.)*
-
-- `routes/`: Houses server-side route definitions, organizing endpoints that the application exposes.
-  - `baseRoute/`
-    - `base.js`: Defines fundamental routes that do not require authorization for user access.
-
-  - `general/`: Contains general-purpose route files that may not fit into more specific categories.
-    - `dynamicClassInstances.js`: Routes handling dynamic class instance operations.
-    - `generalUserRoute.js`: Routes related to general user operations, including generic user management and data retrieval.
-    - `index.js`: An index file to import and re-export the routes defined in this folder.
-    - `profiles.js`: Routes for managing user profiles including resetting passwords and security questions.
-    - `userTypes.js`: Routes for retrieving different user types.
-      
-  *(All other files at this level define routes for specific data types and functionalities indicated by their filenames. For example:)*
- 
+- `routes/`: Defines server-side route handlers, organizing application endpoints.
+  - `baseRoute/`:
+    - `base.js`: Provides fundamental routes that do not require user authorization.
+  
+  - `general/`: Contains general-purpose route files not fitting into other specific categories.
+    - `dynamicClassInstances.js`: Manages routes for dynamic class instance operations.
+    - `generalUserRoute.js`: Handles general user operations, such as basic user management and data retrieval.
+    - `index.js`: Aggregates and re-exports routes defined in this directory.
+    - `profiles.js`: Manages routes related to user profiles, including password resets and security questions.
+    - `userTypes.js`: Provides routes for retrieving various user types.
+  
+  *(All other route files at this level correspond to data types or functionalities indicated by their filenames, for example:)*
+  
   - `characteristic.js` / `characteristics.js`: Routes related to characteristics.
   - `code.js` / `codes.js`: Routes related to codes.
-  - `dataDashboard.js`: Routes for data dashboards (aggregated data views).
-  - `dataExport.js`: Routes that handle exporting data from the system.
-  - `errorReport.js`: Routes for logging issues.
-  - `fileUploading.js`: Routes for handling file uploads and related operations.
+  - `dataDashboard.js`: Routes for handling data dashboards (aggregated data views).
+  - `dataExport.js`: Routes for exporting data from the system.
+  - `errorReport.js`: Routes for logging and reporting errors.
+  - `fileUploading.js`: Routes for managing file uploads and related operations.
 
- - `services/`: Contains end-point functions that perform operations and data manipulation, interacting with models and external sources to implement the application's core functionalities.
+- `services/`: Implements endpoint functionalities, performing operations and data manipulation while interacting with models and external sources.
 
-  *(Note: Folders named after data types typically contain three or less files following a specific pattern:*
-  
+  *(Folders named after data types usually follow a pattern:)*  
   - *`dataType/`*
-    - *`dataType.js`: Core logic for handling a single object of that data type.*
-    - *`dataTypeBuilder.js`: Utilities for constructing, assembling, and updating data type objects, accessible via the interface API or file uploading API.*
-    - *`dataTypes.js`: Functions and operations dealing with multiple objects of that data type.*
-     
-  *`characteristic/`,  `code/`, `dataset/` and other folders named after data types adhere to this pattern.)*
+    - *`dataType.js`: Core logic for handling a single data type object.*
+    - *`dataTypeBuilder.js`: Utilities for assembling and updating data type objects through interfaces or file uploads.*
+    - *`dataTypes.js`: Functions and operations related to multiple data type objects.*
   
-  *Only files that do not follow this pattern are listed below.*
+  *(Examples: `characteristic/`, `code/`, `dataset/` and others follow this pattern.)*
+
+  *Only files deviating from this pattern are listed below:*
   
-  - `address/`: Services related to address data handling.
-    - `index.js`: An entry point file that may aggregate and re-export address-related services.
-    - `streetDirections.js`: Logic for handling street direction data (e.g., N, S, E, W).
-    - `streetTypes.js`: Services defining various street types (e.g., Road, Avenue, Boulevard).
+  - `address/`:
+    - `index.js`: Aggregates and re-exports address-related services.
+    - `streetDirections.js`: Handles logic related to street directions (e.g., N, S, E, W).
+    - `streetTypes.js`: Defines various street types (e.g., Road, Avenue, Boulevard).
   
-  - `dataDashboard/`: Services for data dashboards (aggregated data views).
-    - `dataDashboard.js`: Logic for handling data retrieval to create data dashboards.
-
-  - `dataExport/`
-    - `dataExport.js`: Core logic and functions to handle data export operations.
-
-  - `errorReport/`
-    - `frontendErrorReport.js`: Logic or utilities specifically dealing with front-end error reporting and routing that data for storage.
-
-  - `fileUploading/`: Handles various file uploading functionalities.
-    - `configs.js`: Configuration settings and parameters for file uploading, specifying how the sandbox handles files (e.g., issuing warnings or rejecting them) based on missing properties in the file.
-    - `fileUploading.js`: Core logic for handling file uploads.
-    - `fileUploadingDirectly.js`: Specialized logic for direct file uploads with out any checking.
-    - `fileUploadingHander.js`: Handler utility for managing and processing different types of file uploads.
-    - `fileUploadingMultiSubArray.js`: Logic for handling file uploads that involve multiple organizations.
-
-  - `middleware/`: Houses middleware functions that run before specific route handlers to perform checks, validations, or transformations on requests.
-    - `auth.js`: Authentication middleware that handles verifying user tokens and sessions.
-    - `errorHandler.js`: Middleware that catches and processes errors, returning standardized error responses.
-
+  - `dataDashboard/`:
+    - `dataDashboard.js`: Implements logic for retrieving and structuring data into dashboards.
+  
+  - `dataExport/`:
+    - `dataExport.js`: Core logic and functions for exporting data.
+  
+  - `errorReport/`:
+    - `frontendErrorReport.js`: Specializes in handling and routing front-end error reports for storage.
+  
+  - `fileUploading/`:
+    - `configs.js`: Provides configuration settings for file uploads, including handling files with missing properties.
+    - `fileUploading.js`: Core logic for file uploading operations.
+    - `fileUploadingDirectly.js`: Specialized logic for direct file uploads without preliminary checks.
+    - `fileUploadingHander.js`: A handler utility for managing and processing various file uploads.
+    - `fileUploadingMultiSubArray.js`: Handles file uploads involving multiple organizations.
+  
+  - `middleware/`:
+    - `auth.js`: Authentication middleware that verifies user tokens and sessions.
+    - `errorHandler.js`: Middleware for catching and processing errors, returning standardized error responses.
+  
   - `nodeGraph/`:
-    - `nodeGraphData.js`: Services or logic related to generating node graph data, including fetching data and transforming to it graph-based structures.
-
+    - `nodeGraphData.js`: Services related to generating and handling node graph data.
+  
   - `profile/`:
-    - `profile.js`: Core logic for handling user profile data, including retrieving and updating profile information.
-
+    - `profile.js`: Core logic for retrieving and updating user profile data.
+  
   - `sankeyDiagram/`:
-    - `sankeyDiagram.js`: Logic for preparing data for Sankey Diagram visualization.
-
-  - `userAccount/`: Services related to user account management and lifecycle.
-    - `auth.js`: Logic for user authentication handling (sign-up, sign-in, sign-out).
-    - `email.js`: Services for sending user account-related emails (e.g., verification).
-    - `firstEntry.js`: Logic handling the user's first entry into the system (initial setup and registration).
-    - `securityQuestions.js`: Handling user security questions for authentication.
-    - `user.js`: Core logic for managing a single user account.
-    - `users.js`: Core logic for managing multiple user accounts.
-    - `verifyUser`: Logic responsible for verifying a user’s authorization to modify their account.
-
-  - `users/`: Contains logic and utilities related to user management and operations.
-    - `invite.js`: Handles logic for inviting users, generating invitation links, tokens, and notifications.
-    - `users.js`: Functions and operations dealing with multiple user entities, including retrieval and deleting.
-
-  - `deleteOrganizationWithAllData.js`: A utility for deleting an organization along with all associated records.
-
-  - `dynamicClassInstances.js`: Handles retrieval of dynamic class instances within the application.
+    - `sankeyDiagram.js`: Prepares data for Sankey Diagram visualizations.
   
-  - `helpers.js`: A collection of general helper functions used by various modules throughout the backend.
+  - `userAccount/`:
+    - `auth.js`: Manages user authentication activities, including sign-up, sign-in, and sign-out.
+    - `email.js`: Sends user account-related emails (e.g., verification messages).
+    - `firstEntry.js`: Handles the user's initial entry into the system (initial setup and registration).
+    - `securityQuestions.js`: Manages user security questions for authentication.
+    - `user.js`: Core logic for managing an individual user account.
+    - `users.js`: Core logic for handling multiple user accounts.
+    - `verifyUser`: Verifies that users have the necessary authorization to modify their accounts.
   
-  - `userTypes.js`: Logic related to different user roles.
+  - `users/`:
+    - `invite.js`: Handles user invitations, including generating links, tokens, and related notifications.
+    - `users.js`: Provides operations for managing multiple user entities, including retrieval and deletion.
+  
+  - `deleteOrganizationWithAllData.js`: Utility for deleting an organization and all associated records.
+  
+  - `dynamicClassInstances.js`: Retrieves and manages dynamic class instances within the application.
+  
+  - `helpers.js`: A collection of general helper functions used throughout the backend.
+  
+  - `userTypes.js`: Logic related to handling various user roles.
 
-- `utils/`: A collection of utility functions that provide general-purpose support across the application.
+- `utils/`: Offers general-purpose utility functions and support modules.
 
-  - `constants/`: Holds constant values, configuration data, or reference tables used throughout the application.
-    - `province.js`: Defines province-level constants, including province names, codes, and types.
-
-  - `error/`: Contains utilities dedicated to error handling.
-    - `index.js`: Extending Error for managing and formatting different types of errors.
-
-  - `hashing/`: Provides hashing-related functions and logic.
-    - `index.js`: Implementing hashing algorithms for passwords.
-
-  - `mailer/`: Services and utilities related to sending emails.
-    - `index.js`: Main logic for sending different emails.
-    - `template.js`: Defines email templates.
+  - `constants/`:
+    - `province.js`: Defines province-level constants, including names, codes, and types.
+  
+  - `error/`:
+    - `index.js`: Extends Error handling, enabling customized formatting and management of various error types.
+  
+  - `hashing/`:
+    - `index.js`: Implements hashing algorithms, typically for password security.
+  
+  - `mailer/`:
+    - `index.js`: Core logic for sending emails.
+    - `template.js`: Defines templates for different types of emails.
 
 
 
