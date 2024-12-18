@@ -8,9 +8,6 @@
 - [Features](#features)
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
