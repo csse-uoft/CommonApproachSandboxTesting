@@ -79,7 +79,7 @@ yarn start
     - `profiles.js`: Manages routes related to user profiles, including password resets and security questions.
     - `userTypes.js`: Provides routes for retrieving various user types.
   
-  *(All other route files at this level correspond to data types or functionalities indicated by their filenames, for example:)*
+  *(All other route files at this level correspond to data types or functionalities indicated by their filenames, for example:*
   
   - `characteristic.js` / `characteristics.js`: Routes related to characteristics.
   - `code.js` / `codes.js`: Routes related to codes.
@@ -88,15 +88,17 @@ yarn start
   - `errorReport.js`: Routes for logging and reporting errors.
   - `fileUploading.js`: Routes for managing file uploads and related operations.
 
+  *)*
+
 - `services/`: Implements endpoint functionalities, performing operations and data manipulation while interacting with models and external sources.
 
-  *(Folders named after data types usually follow a pattern:)*  
+  *(Folders named after data types usually follow a pattern:*  
   - *`dataType/`*
     - *`dataType.js`: Core logic for handling a single data type object.*
     - *`dataTypeBuilder.js`: Utilities for assembling and updating data type objects through interfaces or file uploads.*
     - *`dataTypes.js`: Functions and operations related to multiple data type objects.*
   
-  *(Examples: `characteristic/`, `code/`, `dataset/` and others follow this pattern.)*
+  *Examples: `characteristic/`, `code/`, `dataset/` and others follow this pattern.)*
 
   *Only files deviating from this pattern are listed below:*
   
