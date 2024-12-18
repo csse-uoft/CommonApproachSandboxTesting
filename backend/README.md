@@ -122,5 +122,27 @@ yarn start
     - `fileUploadingHander.js`: Handler utility for managing and processing different types of file uploads.
     - `fileUploadingMultiSubArray.js`: Logic for handling file uploads that involve multiple organizations.
 
+  - `middleware/`: Houses middleware functions that run before specific route handlers to perform checks, validations, or transformations on requests.
+    - `auth.js`: Authentication middleware that handles verifying user tokens and sessions.
+    - `errorHandler.js`: Middleware that catches and processes errors, returning standardized error responses.
+
+  - `nodeGraph/`:
+    - `nodeGraphData.js`: Services or logic related to generating node graph data, including fetching data and transforming to it graph-based structures.
+
+  - `profile/`:
+    - `profile.js`: Core logic for handling user profile data, including retrieving and updating profile information.
+
+  - `sankeyDiagram/`:
+    - `sankeyDiagram.js`: Logic for preparing data for Sankey Diagram visualization.
+
+  - `userAccount/`: Services related to user account management and lifecycle.
+    - `auth.js`: Logic for user authentication handling (sign-up, sign-in, sign-out).
+    - `email.js`: Services for sending user account-related emails (e.g., verification).
+    - `firstEntry.js`: Logic handling the user's first entry into the system (initial setup and registration).
+    - `securityQuestions.js`: Handling user security questions for authentication.
+    - `user.js`: Core logic for managing a single user account.
+    - `users.js`: Core logic for managing multiple user accounts.
+    - `verifyUser`: Logic responsible for verifying a user’s authorization to modify their account.
+
 
 
