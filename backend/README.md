@@ -88,3 +88,39 @@ yarn start
   - `errorReport.js`: Routes for logging issues.
   - `fileUploading.js`: Routes for handling file uploads and related operations.
 
+ - `services/`: Contains end-point functions that perform operations and data manipulation, interacting with models and external sources to implement the application's core functionalities.
+
+  *(Note: Folders named after data types typically contain three or less files following a specific pattern:*
+  
+  - *`dataType/`*
+    - *`dataType.js`: Core logic for handling a single object of that data type.*
+    - *`dataTypeBuilder.js`: Utilities for constructing, assembling, and updating data type objects, accessible via the interface API or file uploading API.*
+    - *`dataTypes.js`: Functions and operations dealing with multiple objects of that data type.*
+     
+  *`characteristic/`,  `code/`, `dataset/` and other folders named after data types adhere to this pattern.)*
+  
+  *Only files that do not follow this pattern are listed below.*
+  
+  - `address/`: Services related to address data handling.
+    - `index.js`: An entry point file that may aggregate and re-export address-related services.
+    - `streetDirections.js`: Logic for handling street direction data (e.g., N, S, E, W).
+    - `streetTypes.js`: Services defining various street types (e.g., Road, Avenue, Boulevard).
+  
+  - `dataDashboard/`: Services for data dashboards (aggregated data views).
+    - `dataDashboard.js`: Logic for handling data retrieval to create data dashboards.
+
+  - `dataExport/`
+    - `dataExport.js`: Core logic and functions to handle data export operations.
+
+  - `errorReport/`
+    - `frontendErrorReport.js`: Logic or utilities specifically dealing with front-end error reporting and routing that data for storage.
+
+  - `fileUploading/`: Handles various file uploading functionalities.
+    - `configs.js`: Configuration settings and parameters for file uploading, specifying how the sandbox handles files (e.g., issuing warnings or rejecting them) based on missing properties in the file.
+    - `fileUploading.js`: Core logic for handling file uploads.
+    - `fileUploadingDirectly.js`: Specialized logic for direct file uploads with out any checking.
+    - `fileUploadingHander.js`: Handler utility for managing and processing different types of file uploads.
+    - `fileUploadingMultiSubArray.js`: Logic for handling file uploads that involve multiple organizations.
+
+
+
