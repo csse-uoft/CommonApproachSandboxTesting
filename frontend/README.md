@@ -32,246 +32,246 @@ npx serve -s ./build
 ```
 ---
 ## Structure
-The code building pages and components needed to build pages are in folder src/components. Most of pages are folded by their catogaries. For example, Dashboards.js and the buttons on the dashboard NavButton.js are in the src/component/dashboard. Moreover, AddEditImpactRisk.js(addEditImpactRisk page) and ImpactRisks(List of Impact Risks page) are in src/components/impactRisk
+
+The source code for building pages and their components is located in the `src/components` folder. Most pages are organized by their respective categories. For example, `Dashboards.js` and the dashboard navigation button `NavButton.js` are found in `src/components/dashboard`. Additionally, `AddEditImpactRisk.js` (the Add/Edit Impact Risk page) and `ImpactRisks.js` (the Impact Risks listing page) reside in `src/components/impactRisk`.
 
 - `src/`
-  - `components/`: contains the core code for building pages and the reusable components needed for those pages. Most pages and their associated components are organized into subfolders by category for better modularity and maintainability.
+  - `components/`: Contains the core code for building pages and the reusable components required for those pages. Most pages and their associated components are organized into subfolders by category for enhanced modularity and maintainability.
     
-    - `ReportGenerate/`: This folder includes various components dedicated to generating different types of reports and managing their related data.
-      - `CharacteristicReports.js`: Component responsible for generating and displaying characteristic-based data.
-      - `CodeReports.js`: Component for generating and displaying code-based data.
-      - `GroupMembers.js`: Component for generating and displaying organization members in groups.
-      - `ImpactReports.js`: Component for generating and showing impactReport-based data.
-      - `IndicatorReports.js`: Component for generating and displaying indicator-based data.
-      - `OutcomeReports.js`: Component for generating and displaying outcome-based data.
-      - `ReportTypesPage.js`: Component serving as a page to list and select various report types.
-      - `StakeholderOutcomeReports.js`: Component for generating and displaying stakeholderOutcome-based data.
-      - `ThemeReport.js`: Component for generating and displaying theme-based data.
+    - `ReportGenerate/`: Includes various components dedicated to generating different types of reports and managing their related data.
+      - `CharacteristicReports.js`: Generates and displays characteristic-based data.
+      - `CodeReports.js`: Generates and displays code-based data.
+      - `GroupMembers.js`: Generates and displays organization members in groups.
+      - `ImpactReports.js`: Generates and displays impact report-based data.
+      - `IndicatorReports.js`: Generates and displays indicator-based data.
+      - `OutcomeReports.js`: Generates and displays outcome-based data.
+      - `ReportTypesPage.js`: Lists and allows selection of various report types.
+      - `StakeholderOutcomeReports.js`: Generates and displays stakeholder outcome-based data.
+      - `ThemeReport.js`: Generates and displays theme-based data.
     
-    - `characteristics/`: This folder organizes components related to displaying and managing characteristics.
-      - `AddEditCharacteristic.js`: A page component for creating and updating one characteristic.
-      - `Characteristic.js`: A component representing a single characteristic record or view.
-      - `CharacteristicView.js`: A component displaying a detailed view of a characteristic.
-      - `Characteristics.js`: A component listing and managing multiple characteristics.
+    - `characteristics/`: Organizes components related to displaying and managing characteristics.
+      - `AddEditCharacteristic.js`: Creates and updates a single characteristic.
+      - `Characteristic.js`: Represents a single characteristic record or view.
+      - `CharacteristicView.js`: Displays a detailed view of a characteristic.
+      - `Characteristics.js`: Lists and manages multiple characteristics.
     
-    - `codes/`: This folder organizes components related to displaying and managing codes.
-      - `AddEditCode.js`: Component for adding or editing one code.
-      - `Code.js`: Component representing an individual code.
-      - `CodeView.js`: Component displaying a detailed view of a particular code.
-      - `Codes.js`: A component listing and managing multiple codes.
+    - `codes/`: Organizes components related to displaying and managing codes.
+      - `AddEditCode.js`: Adds or edits a single code.
+      - `Code.js`: Represents an individual code.
+      - `CodeView.js`: Displays a detailed view of a specific code.
+      - `Codes.js`: Lists and manages multiple codes.
      
-    - `counterfactual/`: This folder organizes components related to displaying and managing counterfactuals.
-      - `AddEditCounterfactual.js`: Component for adding or editing one counterfactual.
-      - `Counterfactuals.js`: Component for listing and managing counterfactuals.
+    - `counterfactual/`: Organizes components related to displaying and managing counterfactuals.
+      - `AddEditCounterfactual.js`: Adds or edits a single counterfactual.
+      - `Counterfactuals.js`: Lists and manages counterfactuals.
         
-    - `dashboard/`: The dashboard folder includes components related to the dashboard page
-      - `Dashboards.js`: The main component for rendering the dashboard page.
-      - `NavButton.js`: A reusable button component for dashboard navigation. While primarily used in the dashboard, this component is designed for reuse across other navigation areas.
+    - `dashboard/`: Includes components related to the dashboard page.
+      - `Dashboards.js`: Renders the main dashboard page.
+      - `NavButton.js`: A reusable button component for dashboard navigation, also designed for use in other navigation areas.
         
     - `dataDashboard/`: Components for displaying and managing data dashboards.
-      - `DataDashboard.js`: Main component of the data dashboard page, featuring various types of graphs to visually represent the data.
+      - `DataDashboard.js`: Renders the data dashboard page with various graphs to visually represent data.
         
     - `dataExport/`: Components related to data exporting functionality.
-      - `dataExport.js`: Main component or module handling data export operations.
+      - `DataExport.js`: Handles data export operations.
         
-    - `datasets/`: This folder organizes components related to displaying and managing datasets.
-      - `AddEditDataset.js`: Component for adding or editing one dataset.
-      - `Datasets.js`: Component for listing and managing datasets.
+    - `datasets/`: Organizes components related to displaying and managing datasets.
+      - `AddEditDataset.js`: Adds or edits a single dataset.
+      - `Datasets.js`: Lists and manages datasets.
         
     - `forgotPassword/`: Components related to password recovery functionality.
-      - `ForgotPassword.js`: Component handling the "Forgot Password" page and logic.
-      - `ResetPassword.js`: Component that provides the "Reset Password" functionality.
+      - `ForgotPassword.js`: Manages the "Forgot Password" page and logic.
+      - `ResetPassword.js`: Provides the "Reset Password" functionality.
     
-    - `groups/`: Components to manage and display groups.
-      - `AddEditGroup.js`: Component for adding or editing one group.
-      - `Groups.js`: Component to list and manage groups.
+    - `groups/`: Components for managing and displaying groups.
+      - `AddEditGroup.js`: Adds or edits a single group.
+      - `Groups.js`: Lists and manages groups.
     
-    - `howMuchImpact/`: Components focused on managing the How Much Impact.
-      - `AddEditHowMuchImpact.js`: Component for creating or updating one How Much Impact.
-      - `HowMuchImpacts.js`: Component listing HowMuchImpact.
+    - `howMuchImpact/`: Components focused on managing "How Much Impact."
+      - `AddEditHowMuchImpact.js`: Creates or updates a single "How Much Impact."
+      - `HowMuchImpacts.js`: Lists "How Much Impact" entries.
     
     - `impactModels/`: Components dealing with impact model data.
-      - `AddEditImpactModel.js`: Component for adding or editing one Impact Model.
-      - `impactModels.js`: Component listing and managing Impact Models associated with a specific organization.
-      - `organization-impactModel.js`: This component allows users to view and select from a list of organizations. Upon choosing an organization, users can seamlessly navigate to impactModels.js to explore further details.
+      - `AddEditImpactModel.js`: Adds or edits a single Impact Model.
+      - `ImpactModels.js`: Lists and manages Impact Models associated with specific organizations.
+      - `OrganizationImpactModel.js`: Allows users to view and select organizations, then navigate to `ImpactModels.js` for detailed exploration.
     
     - `impactReport/`: Components related to generating and displaying impact reports.
-      - `AddEditImpactReport.js`: Component for creating or updating one impact report.
-      - `ImpactReport.js`: Component for a single impact report.
-      - `ImpactReportView.js`: Component providing a detailed view of an impact report.
-      - `ImpactReports.js`: Component for listing and managing impact reports.
-      - `Organization-impactReport.js`: Component for organization-specific impact report details.
+      - `AddEditImpactReport.js`: Creates or updates a single impact report.
+      - `ImpactReport.js`: Represents a single impact report.
+      - `ImpactReportView.js`: Provides a detailed view of an impact report.
+      - `ImpactReports.js`: Lists and manages impact reports.
+      - `OrganizationImpactReport.js`: Displays organization-specific impact report details.
         
-    - `impactRisk/`: The impactRisk folder contains components for managing and displaying impact risks
-      - `AddEditImpactRisk.js`: A page component for adding or editing one impact risk.
-      - `ImpactRisks.js`:  A page component for listing impact risks.
-
-    - `indicatorReport/`: Components for managing and displaying indicator reports.
-      - `AddEditIndicatorReport.js`: Component for creating or editing an indicator report.
-      - `IndicatorReport.js`: Component representing a single indicator report.
-      - `IndicatorReportView.js`: Component providing a detailed view of an indicator report.
-      - `IndicatorReports.js`: Component for listing and managing indicator reports.
+    - `impactRisk/`: Contains components for managing and displaying impact risks.
+      - `AddEditImpactRisk.js`: Adds or edits a single impact risk.
+      - `ImpactRisks.js`: Lists impact risks.
     
-    - `indicators/`: Components for handling indicators and their related data.
-      - `AddEditIndicator.js`: Component for adding or editing an indicator.
-      - `Indicator.js`: Component representing a single indicator.
-      - `IndicatorView.js`: Component providing a detailed view of an indicator.
-      - `Indicators.js`: Component listing and managing indicators.
+    - `indicatorReport/`: Components for managing and displaying indicator reports.
+      - `AddEditIndicatorReport.js`: Creates or edits an indicator report.
+      - `IndicatorReport.js`: Represents a single indicator report.
+      - `IndicatorReportView.js`: Provides a detailed view of an indicator report.
+      - `IndicatorReports.js`: Lists and manages indicator reports.
+    
+    - `indicators/`: Components for handling indicators and related data.
+      - `AddEditIndicator.js`: Adds or edits an indicator.
+      - `Indicator.js`: Represents a single indicator.
+      - `IndicatorView.js`: Provides a detailed view of an indicator.
+      - `Indicators.js`: Lists and manages indicators.
     
     - `layouts/`: Layout components that define the overall UI structure.
-      - `Footer.js`: Layout component for the page footer.
-      - `TopNavbar.js`: Layout component for the top navigation bar.
+      - `Footer.js`: Renders the page footer.
+      - `TopNavbar.js`: Renders the top navigation bar.
     
     - `login/`: Components associated with the login and authentication process.
-      - `DoubleAuth.js`: Manages two-factor authentication, requiring the user to correctly answer one of three security questions set by themselves.
-      - `LoginPane.js`: Provides the login interface where users can input their email and password.
-      - `SuperPasswordPage.js`: The initial page encountered by the user, serving as an additional authentication step. Users must correctly enter the super password to proceed to the login pane.
+      - `DoubleAuth.js`: Manages two-factor authentication by requiring users to answer one of three security questions.
+      - `LoginPane.js`: Provides the login interface for users to input their email and password.
+      - `SuperPasswordPage.js`: An additional authentication step where users must enter a super password to access the login pane.
     
     - `nodeGraph/`: Components related to displaying data in a node graph.
-      - `nodeGraph.js`: Component that handles node graph visualization and interactions.
+      - `NodeGraph.js`: Handles node graph visualization and interactions.
     
     - `organizations/`: Components for managing and displaying organizations.
-      - `AddEditOrganization.js`: Component for adding or editing one organization.
-      - `Organization.js`: Component representing a single organization’s data.
-      - `OrganizationView.js`: Component providing a detailed view of an organization.
-      - `Organizations.js`: Component listing and managing organizations.
-
+      - `AddEditOrganization.js`: Adds or edits a single organization.
+      - `Organization.js`: Represents a single organization's data.
+      - `OrganizationView.js`: Provides a detailed view of an organization.
+      - `Organizations.js`: Lists and manages organizations.
+    
     - `outcomes/`: Components for managing and displaying outcomes.
-      - `AddEditOutcome.js`: Component for creating or updating an outcome.
-      - `Outcome.js`: Component representing a single outcome.
-      - `OutcomeView.js`: Component providing a detailed view of an outcome.
-      - `Outcomes.js`: Component listing and managing outcomes.
+      - `AddEditOutcome.js`: Creates or updates an outcome.
+      - `Outcome.js`: Represents a single outcome.
+      - `OutcomeView.js`: Provides a detailed view of an outcome.
+      - `Outcomes.js`: Lists and manages outcomes.
     
     - `registration/`: Components related to user registration and onboarding.
-      - `UserFirstEntry.js`: Component handling the first-time entry flow for new users.
-      - `UserInvite.js`: Component to handle user invitations.
+      - `UserFirstEntry.js`: Handles the first-time entry flow for new users.
+      - `UserInvite.js`: Manages user invitations.
     
     - `routes/`: Utilities related to routing.
-      - `PrivateRoute.js`: Utility that restricts routes to authenticated users only.
-      - `RoutesForUserTypes.js`: Utility that defines different route configurations based on user roles or types.
+      - `PrivateRoute.js`: Restricts routes to authenticated users only.
+      - `RoutesForUserTypes.js`: Defines route configurations based on user roles or types.
     
     - `sankeyDiagram/`: Components for rendering Sankey diagrams.
-      - `SankeyDiagram.js`: A component that gathers user requirements for a Sankey diagram and renders it accordingly.
+      - `SankeyDiagram.js`: Gathers user requirements and renders Sankey diagrams accordingly.
      
-    - `shared/`: Contains reusable components that can be utilized across various parts of the application.
+    - `shared/`: Contains reusable components utilized across various parts of the application.
       - `Table/`: Components for building tables.
-        - `EnhancedTableHead.js`: A component for rendering a customizable table header, with sorting functionality.
-        - `EnhancedTableToolbar.js`: A component providing toolbar actions for the table (e.g., filters).
-        - `index.js`: Main export file that aggregates and re-exports table components.
-        - `TR.js`: a Wrapper component for rendering table rows.
+        - `EnhancedTableHead.js`: Renders a customizable table header with sorting functionality.
+        - `EnhancedTableToolbar.js`: Provides toolbar actions for the table, such as filters.
+        - `Index.js`: Aggregates and exports table components.
+        - `TR.js`: A wrapper component for rendering table rows.
       
       - `dialogs/`: Common dialog components shared across the application.
         - `DeleteDialog.js`: A reusable confirmation dialog for deletion operations.
-        - `Dialogs.js`: A main or higher-level component that manages and renders various dialogs.
+        - `Dialogs.js`: Manages and renders various dialogs.
       
-      - `fields/`: A collection of field components that serve as building blocks for forms and data entry.
-        - `AddressFieldField.js`: A component for handling address input fields.
-        - `CSVUploadModal.js`: A component providing a modal interface for uploading CSV files.
-        - `CounterFactualField.js`: A field component for managing counterfactual inputs.
+      - `fields/`: A collection of field components serving as building blocks for forms and data entry.
+        - `AddressField.js`: Handles address input fields.
+        - `CSVUploadModal.js`: Provides a modal interface for uploading CSV files.
+        - `CounterFactualField.js`: Manages counterfactual inputs.
         - `FileUploader.js`: A reusable component for uploading files.
-        - `GeneralField.js`: A generic input field component that can be adapted for various inputs.
-        - `ImpactReportField.js`: A specialized field component for impact reports.
-        - `IndicatorReportField.js`: A field component dealing with indicator reports.
-        - `MultiSelectField.js`: A component for selecting multiple options from a list.
-        - `OutcomeField.js`: A component designed for inputting outcome-related data.
-        - `RadioField.js`: A radio button field component for selecting a single option.
-        - `SelectField.js`: A dropdown single select field for choosing one option from many.
-        - `StakeholderOutcomeField.js`: A field component for managing stakeholder outcome inputs.
-        - `URIFields.js`: A URI (or URL) input component.
-        - `dataTypeGraph.js`: A visualization component showing data type relationship graphs.
-        - `IndicatorField.js`: A component specialized for indicator inputs.
+        - `GeneralField.js`: A generic input field adaptable for various inputs.
+        - `ImpactReportField.js`: A specialized field for impact reports.
+        - `IndicatorReportField.js`: Handles indicator report inputs.
+        - `MultiSelectField.js`: Allows selection of multiple options from a list.
+        - `OutcomeField.js`: Designed for inputting outcome-related data.
+        - `RadioField.js`: A radio button field for selecting a single option.
+        - `SelectField.js`: A dropdown field for choosing one option from many.
+        - `StakeholderOutcomeField.js`: Manages stakeholder outcome inputs.
+        - `URIFields.js`: Handles URI or URL inputs.
+        - `DataTypeGraph.js`: Visualizes data type relationship graphs.
+        - `IndicatorField.js`: Specialized for indicator inputs.
        
-      - `DeleteModal.js`: A reusable modal component for confirming deletion actions.
-      - `DropdownFilter.js`: A component for rendering a dropdown filter interface, enabling quick filtering of data.
-      - `DropdownMenu.js`: A component that provides a dropdown menu for selecting actions and navigation.
-      - `LoadingButton.js`: A button component that shows a loading spinner when an action is in progress.
-      - `PasswordHint.js`: A component that displays password requirements or hints.
-      - `index.js`: An index file that may re-export components from the `shared` directory for easier imports.
-
+      - `DeleteModal.js`: A reusable modal for confirming deletion actions.
+      - `DropdownFilter.js`: Renders a dropdown filter interface for quick data filtering.
+      - `DropdownMenu.js`: Provides a dropdown menu for selecting actions and navigation.
+      - `LoadingButton.js`: A button that displays a loading spinner during actions.
+      - `PasswordHint.js`: Displays password requirements or hints.
+      - `Index.js`: Aggregates and exports components from the `shared` directory for easier imports.
+    
     - `stakeholderOutcome/`: Components for handling stakeholder outcomes.
-      - `AddEditStakeholderOutcome.js`: Component for creating or editing stakeholder outcomes.
-      - `StakeholderOutcomeView.js`: Component to display a detailed view of a single stakeholder outcome.
-      - `StakeholderOutcomes.js`: Component listing and managing stakeholder outcomes associated with a specific organization.
-      - `organization-stakeholderOutcome.js`: This component allows users to view and select from a list of organizations. Upon choosing an organization, users can seamlessly navigate to StakeholderOutcomes.js to explore further details.
-      - `stakeholderOutcome.js`: A component representing a single stakeholder outcome.
+      - `AddEditStakeholderOutcome.js`: Creates or edits stakeholder outcomes.
+      - `StakeholderOutcomeView.js`: Displays a detailed view of a single stakeholder outcome.
+      - `StakeholderOutcomes.js`: Lists and manages stakeholder outcomes associated with specific organizations.
+      - `OrganizationStakeholderOutcome.js`: Allows users to view and select organizations, then navigate to `StakeholderOutcomes.js` for detailed exploration.
+      - `StakeholderOutcome.js`: Represents a single stakeholder outcome.
     
     - `stakeholders/`: Components for managing and displaying stakeholders.
-      - `AddEditStakeholder.js`: Component for adding or editing stakeholders.
-      - `Stakeholder.js`: Component representing a single stakeholder.
-      - `StakeholderView.js`: Component providing a detailed view of a stakeholder.
-      - `Stakeholders.js`: Component listing and managing stakeholders.
+      - `AddEditStakeholder.js`: Adds or edits stakeholders.
+      - `Stakeholder.js`: Represents a single stakeholder.
+      - `StakeholderView.js`: Provides a detailed view of a stakeholder.
+      - `Stakeholders.js`: Lists and manages stakeholders.
     
     - `theme/`: Components related to theme management and presentation.
-      - `AddEditTheme.js`: Component for adding or editing theme data.
-      - `Theme.js`: Component representing a single theme.
-      - `ThemeView.js`: Component providing a detailed view of a theme.
-      - `Themes.js`: Component listing and managing themes.
+      - `AddEditTheme.js`: Adds or edits theme data.
+      - `Theme.js`: Represents a single theme.
+      - `ThemeView.js`: Provides a detailed view of a theme.
+      - `Themes.js`: Lists and manages themes.
     
-    - `themeNetwork/`: Components related to theme networks(theme and subTheme Relationships).
-      - `AddEditThemeNetwork.js`: Component for adding or editing a theme network.
-      - `ThemeNetworkView.js`: Component providing a detailed view of a theme network.
-      - `ThemeNetworks.js`: Component listing and managing theme networks.
-
-    - `totalReviewPage/`: Components related to content in a summarized form.
-      - `TotalReviewPage.js`: The main component for displaying all data grouped by organizations.
-      - `TotalReviewPageView.js`: A detailed view component for the total review page.
-      - `TotalReviewPages.js`: A component to list or manage multiple total review pages.
+    - `themeNetwork/`: Components related to theme networks (theme and sub-theme relationships).
+      - `AddEditThemeNetwork.js`: Adds or edits a theme network.
+      - `ThemeNetworkView.js`: Provides a detailed view of a theme network.
+      - `ThemeNetworks.js`: Lists and manages theme networks.
     
-    - `uploadingPages/`: Components for handling pages or interfaces dedicated to uploading files or data.
-      - `uploadingPage.js`: The main component for the uploading page.
+    - `totalReviewPage/`: Components related to summarized content.
+      - `TotalReviewPage.js`: Displays all data grouped by organizations.
+      - `TotalReviewPageView.js`: Provides a detailed view of the total review page.
+      - `TotalReviewPages.js`: Lists and manages multiple total review pages.
+    
+    - `uploadingPages/`: Components for handling file or data uploads.
+      - `UploadingPage.js`: Manages the uploading interface.
     
     - `userProfile/`: Components related to managing and displaying user profile information.
-      - `EditProfile.js`: Component for editing user profile details.
-      - `Profile.js`: Component displaying a user's profile information.
-      - `UserResetPassword.js`: Component for handling user password reset functionality.
-      - `UserResetSecurityQuestion.js`: Component for resetting a user’s security question.
-      - `changePrimaryEmail.js`: Component to allow users to change their primary email address.
+      - `EditProfile.js`: Edits user profile details.
+      - `Profile.js`: Displays a user's profile information.
+      - `UserResetPassword.js`: Handles user password reset functionality.
+      - `UserResetSecurityQuestion.js`: Resets a user’s security question.
+      - `ChangePrimaryEmail.js`: Allows users to change their primary email address.
     
     - `users/`: Components for managing user accounts, including listing users, editing user details, and related forms.
-      - `EditUserForm.js`: A form component to edit an existing user's details.
-      - `User.js`: Component representing a single user’s data.
-      - `Users.js`: Component listing and managing multiple users.
-      - `organizationUsers.js`: Component focusing on the management of users within a specific organization.
+      - `EditUserForm.js`: Edits an existing user's details.
+      - `User.js`: Represents a single user’s data.
+      - `Users.js`: Lists and manages multiple users.
+      - `OrganizationUsers.js`: Manages users within a specific organization.
     
-    - `Landing.js`: The main landing page component, the homepage after login.
-    - `emailConfirm.js`: Component verifying new email addresses or signups.
-
-  - `constants/`: A directory holding various configuration files and constants used throughout the application.
-    - `default_fields.js`: Contains default field definitions and configurations used in forms or other components.
-    - `forgot_password_fields.js`: Defines fields and settings for "forgot password" functionalities.
-    - `index.js`: An index file that may aggregate and re-export constants from this folder for easier imports.
-    - `login_double_auth_fields.js`: Fields and configurations related to login with double (two-factor) authentication.
-    - `updatePasswordFields.js`: Fields and settings for updating a user's password.
-    - `userFirstEntryFields.js`: Configurations for the fields presented to users on their first entry or onboarding.
-    - `userProfileFields.js`: Field definitions for user profile data.
-
-  - `context/`: A folder for React context providers or related logic that manages global state.
-    - `index.js`: The main file that sets up and exports the application’s context.
+    - `Landing.js`: The main landing page component displayed after login.
+    - `EmailConfirm.js`: Verifies new email addresses or signups.
+  
+  - `constants/`: Contains various configuration files and constants used throughout the application.
+    - `default_fields.js`: Defines default field configurations used in forms and components.
+    - `forgot_password_fields.js`: Configures fields and settings for "Forgot Password" functionalities.
+    - `index.js`: Aggregates and exports constants from this folder for easier imports.
+    - `login_double_auth_fields.js`: Configures fields related to double (two-factor) authentication during login.
+    - `updatePasswordFields.js`: Defines fields and settings for updating a user's password.
+    - `userFirstEntryFields.js`: Configures fields presented to users during their first entry or onboarding.
+    - `userProfileFields.js`: Defines fields for user profile data.
+  
+  - `context/`: Manages React context providers and global state logic.
+    - `index.js`: Sets up and exports the application’s context.
   
   - `helpers/`: A collection of utility functions, configuration files, and helper modules that assist various parts of the application.
     - `schemas/`: Contains JSON schema files that define the structure and validation rules for specific data types.
-      - `indicator.json`: Schema defining the structure and validation rules for indicators.
-      - `outcome.json`: Schema for outlining the structure and validation requirements of outcomes.
-      - `theme.json`: Schema describing the structure and rules for themes.
-
-    - `attributeConfig.js`: A configuration file for handling attributes for different datatypes.
-    - `deletingObjectHelper.js`: Utility functions to assist with deleting objects.
-    - `formulaHelpers.js`: Utility functions that handle string format.
-    - `helpersForDropdownFilter.js`: Specific helpers for managing dropdown filter functionality.
-    - `index.js`: An index file that aggregates and re-export helpers for easier imports.
-    - `location_helpers.js`: Functions for formatting the locations to string.
-    - `navigatorHelper.js`: Helpers for page navigation.
-    - `operation_hour_helpers.js`: Utilities for handling time-based logic.
-    - `phone_number_helpers.js`: Functions related to phone number formatting, validation, and parsing.
-    - `validation_helpers.js`: Helper functions related to data validation.
-
-  - `defaults.js`: A file for storing constant strings and configuration values that can be referenced across the application.
-
+      - `indicator.json`: Defines the structure and validation rules for indicators.
+      - `outcome.json`: Outlines the structure and validation requirements for outcomes.
+      - `theme.json`: Describes the structure and rules for themes.
+  
+    - `attributeConfig.js`: Handles attribute configurations for different data types.
+    - `deletingObjectHelper.js`: Assists with deleting objects.
+    - `formulaHelpers.js`: Manages string formatting and related utilities.
+    - `helpersForDropdownFilter.js`: Manages dropdown filter functionality.
+    - `index.js`: Aggregates and exports helpers for easier imports.
+    - `location_helpers.js`: Formats location data into strings.
+    - `navigatorHelper.js`: Assists with page navigation.
+    - `operation_hour_helpers.js`: Handles time-based logic.
+    - `phone_number_helpers.js`: Formats, validates, and parses phone numbers.
+    - `validation_helpers.js`: Provides data validation utilities.
+  
+  - `defaults.js`: Stores constant strings and configuration values referenced across the application.
+  
   - `App.js`: The main application component, serving as the root of the React component tree.
-  - `ErrorBoundary.js`: A component designed to catch and display errors that occur in the component tree below it, preventing the entire app from crashing.
-  - `index.js`: The entry point of the application, typically responsible for rendering the root `App` component into the DOM.
-  - `routes.js`: A file containing route definitions for the application, mapping URLs to components.
-    
+  - `ErrorBoundary.js`: Catches and displays errors occurring in the component tree below, preventing the entire app from crashing.
+  - `index.js`: The entry point of the application, responsible for rendering the root `App` component into the DOM.
+  - `routes.js`: Defines route mappings for the application, linking URLs to components.
 
 
 
