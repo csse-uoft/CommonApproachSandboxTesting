@@ -30,6 +30,10 @@ The Sankey Diagram in the project is built using D3.js within the SankeyDiagram.
 
 The project also uses Cytoscape to generate node graphs within the NodeGraph.js module. Cytoscape provides a highly customizable framework for visualizing networks, allowing users to modify the colour and position of nodes and edges. Users can also remove or omit specific nodes from the graph, offering flexibility to tailor the visualization to their needs. This feature enables a more interactive and personalized experience, making it easier to analyze complex relationships within the graph.
 
+#### DataDashboard
+
+The dataDashboard module utilizes Recharts to generate a variety of interactive data visualizations, including bar charts, line charts, and pie charts. Recharts is a React-based library that provides simple yet highly customizable charting solutions. The dataDashboard module also allows users to extend its functionality by adding more types of charts as needed, ensuring adaptability to evolving data visualization requirements.
+
 ---
 ## Installation
 #### Install dependencies
