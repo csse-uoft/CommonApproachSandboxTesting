@@ -1,6 +1,5 @@
 const {hasAccess} = require("../../helpers/hasAccess");
 const {Transaction} = require("graphdb-utils");
-const {fileUploadingMultiOrganization} = require("./fileUploadingMultiOrganization");
 const {fileUploading} = require("./fileUploading");
 const {fileUploadingMultiSubArray} = require("./fileUploadingMultiSubArray");
 const {fileUploadingDirectly} = require("./fileUploadingDirectly");
