@@ -1,4 +1,5 @@
 # Common Approach Sandbox Frontend
+
 ---
 ## Table of Contents
 - [Introduction](#introduction)
@@ -6,7 +7,18 @@
 - [Structure](#structure)
 ---
 ## Introduction
-The frontend uses React.js as the framework and primarily leverages MaterialUI for its theming.
+
+### Framework: React.js
+
+React.js serves as the core framework for the frontend of the Common Approach Sandbox. This JavaScript library was chosen for its powerful component-based architecture, which facilitates the creation of reusable UI components and ensures a consistent user experience. React.js also excels in maintaining performance through its virtual DOM, enabling efficient updates and rendering.
+
+### Styling and Theming: MaterialUI
+
+To achieve a cohesive and visually appealing design, the project leverages MaterialUI (MUI) for theming and component styling. MaterialUI provides a rich set of pre-designed components adhering to Google's Material Design principles, ensuring a modern and professional look and feel. It also simplifies the process of customizing themes to align with specific branding requirements.
+
+### Programming Language: JavaScript
+
+JavaScript serves as the primary programming language for the frontend development. Its flexibility and vast ecosystem make it an ideal choice for building interactive and dynamic user interfaces. JavaScript’s compatibility with React.js ensures seamless integration and enables the use of modern ES6+ features for cleaner and more efficient code.
 
 ---
 ## Installation
