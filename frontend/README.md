@@ -20,6 +20,16 @@ To achieve a cohesive and visually appealing design, the project leverages Mater
 
 JavaScript serves as the primary programming language for the frontend development. Its flexibility and vast ecosystem make it an ideal choice for building interactive and dynamic user interfaces. JavaScript’s compatibility with React.js ensures seamless integration and enables the use of modern ES6+ features for cleaner and more efficient code.
 
+### Visualization: 
+
+#### SankeyDiagram.js
+
+The Sankey Diagram in the project is built using D3.js within the SankeyDiagram.js module. D3.js is a powerful JavaScript library for creating dynamic and interactive data visualizations. By leveraging D3.js, the project ensures that the Sankey Diagram is both visually compelling and capable of representing complex data flows effectively. Additionally, D3.js allows users to specify the position of nodes in relation to their respective columns, providing greater control and customization over the layout and structure of the diagram. However, the current implementation does not provide an option for users to specify the color of the flows or nodes, which may be considered for future enhancements.
+
+#### Cytoscape
+
+The project also uses Cytoscape to generate node graphs within the NodeGraph.js module. Cytoscape provides a highly customizable framework for visualizing networks, allowing users to modify the colour and position of nodes and edges. Users can also remove or omit specific nodes from the graph, offering flexibility to tailor the visualization to their needs. This feature enables a more interactive and personalized experience, making it easier to analyze complex relationships within the graph.
+
 ---
 ## Installation
 #### Install dependencies
