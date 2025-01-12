@@ -7,7 +7,57 @@
 - [Structure](#structure)
 ---
 ## Introduction
-The backend is built using a robust combination of JavaScript, Express.js, and Node.js
+
+The backend of our system is designed to provide robust, efficient, and scalable support for the application, leveraging a carefully chosen tech stack. We utilize Express.js and Node.js for building and running the server-side logic, GraphDB as the primary database for essential interconnected data, Ontology for semantic data relationships, GraphDB utils to provide an object-oriented approach to interacting with GraphDB, and MongoDB for managing non-essential and unstructured data such as logs. This combination of technologies ensures a seamless integration of performance, flexibility, and advanced data management capabilities to meet the needs of our application.
+
+### Express.js
+
+Express.js is used as the primary web application framework. It enables us to build a flexible and modular API structure for handling HTTP requests and responses. Its lightweight nature and middleware capabilities make it an ideal choice for our application's backend.
+
+### Node.js
+Node.js serves as the runtime environment for executing JavaScript on the server. Its non-blocking, event-driven architecture ensures high performance and scalability, which is crucial for handling concurrent requests in our system.
+
+### GraphDB
+GraphDB is at the core of our data management strategy. It is used to store and manage essential data such as:
+
+- User data
+- Data related to indicators
+- Data related to organizations
+
+The graph database structure is particularly suited for handling interconnected data and enabling advanced querying, making it a vital part of our architecture.
+
+### GraphDB Utils
+
+To simplify and streamline interactions with GraphDB, we leverage **GraphDB utils**, a utility library that provides an object-oriented interface. This approach abstracts complex query logic and enables developers to interact with GraphDB in a more intuitive and manageable way. It supports operations such as:
+
+- Querying nodes and relationships  
+- Managing entities as objects  
+- Defining and enforcing schema-like structures  
+
+This abstraction enhances developer productivity while maintaining flexibility for advanced graph queries.
+
+### Ontology
+
+Ontology is integrated into the backend to provide a semantic layer for the data in GraphDB. It helps define relationships and hierarchies among entities, enabling more meaningful data queries and fostering better understanding and navigation of the stored data.
+
+### MongoDB
+
+MongoDB is employed to manage non-essential data that does not require the graph structure. Examples include:
+
+- Application logs  
+- Temporary or auxiliary data  
+- Unstructured or semi-structured data  
+
+The document-based model of MongoDB ensures flexibility and simplicity in handling such data types.
+
+### Data Distribution and Management
+
+The division of data storage between GraphDB and MongoDB reflects our strategic approach:
+
+- **Essential data** is stored in GraphDB to leverage its advanced graph capabilities for interconnected datasets.  
+- **Non-essential data** is stored in MongoDB for efficient handling of logs and other auxiliary data that do not require the graph structure.
+
+This hybrid approach ensures the backend remains optimized for both performance and functionality, catering to the varying requirements of our application.
 
 ---
 
