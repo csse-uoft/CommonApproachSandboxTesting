@@ -12,8 +12,7 @@ The backend of our system is designed to provide robust, efficient, and scalable
 
 ### Express.js
 
-Express.js is used as the primary web application framework. It enables us to build a flexible and modular API structure for handling HTTP requests and responses. Its lightweight nature and middleware capabilities make it an ideal choice for our application's backend.
-
+Express.js is used as the primary web application framework. It enables us to build a flexible and modular API structure for handling HTTP requests and responses.
 ### Node.js
 Node.js serves as the runtime environment for executing JavaScript on the server. Its non-blocking, event-driven architecture ensures high performance and scalability, which is crucial for handling concurrent requests in our system.
 
@@ -24,7 +23,7 @@ GraphDB is at the core of our data management strategy. It is used to store and 
 - Data related to indicators
 - Data related to organizations
 
-The graph database structure is particularly suited for handling interconnected data and enabling advanced querying, making it a vital part of our architecture.
+The graph database structure is particularly suited for handling interconnected data and enabling advanced querying.
 
 ### GraphDB Utils
 
